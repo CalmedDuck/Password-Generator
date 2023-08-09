@@ -7,6 +7,21 @@ function getPasswordLength () {
 
 }
 
+function desiredCharacterTypes () {
+    var includeLowercase = confirm("Include lowercase letters? (Yes/Cancel");
+    var includeUppercase =confirm("Include Upper Case letters? (Yes/Cancel)");
+    var includeNumeric = confirm("Include numeric characters? (Yes/Cancel");
+    var includeSpecial = confirm("Include special characters? (Yes/Cancel)");
+
+    return {
+        includeLowercase: includeLowercase,
+        includeUppercase: includeUppercase,
+        includeNumeric: includeNumeric,
+        includeSpeical: includeSpecial
+    };
+  
+  
+  }
 function generatePassword() {
     var speicalChars = "!@#$%^&*()_-+=<>?";
     var numericChars = "0123456789";
@@ -22,6 +37,7 @@ function writePassword() {
     passwordText.value = password;
   
   }
+  
   
 
   // Add event listener to generate button
