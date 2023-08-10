@@ -27,6 +27,12 @@ function generatePassword() {
     var numericChars = "0123456789";
     var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+
+    var passwordLength = getPasswordLength();
+    if (isNaN(passwordLength)) {
+        alert('Password length must be between 8-128 characters.');
+        return '';
+    }
   }
 
 // Write password to the #password input
