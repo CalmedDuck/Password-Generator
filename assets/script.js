@@ -33,6 +33,17 @@ function generatePassword() {
         alert('Password length must be between 8-128 characters.');
         return '';
     }
+
+    if (passwordLength < 8) {
+        alert("Password length must be at least 8 characters.");
+        return '';
+    }
+
+    if (passwordLength > 128) {
+        alert("Password length may be no more than 128 characters.");
+        return '';
+
+    }
   }
 
 // Write password to the #password input
