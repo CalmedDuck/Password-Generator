@@ -14,12 +14,12 @@ This website can be acessed through the following link.
 
 ## Usage
 
-You can use the nav section and click on the links to take you to the following section of the page.
+Press the generate password button and answer the following prompts to generate a unique password.
 
-![Alt Text]()
+![Alt Text](assets\images\screenshot.png)
 
 ## Credits
-
+Sources for IsNaN and operators for character pool and parseint.
 https://www.w3schools.com/jsref/jsref_isnan.asp
 https://www.w3schools.com/js/js_operators.asp
 https://www.w3schools.com/jsref/jsref_parseint.asp
