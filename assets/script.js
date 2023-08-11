@@ -8,10 +8,10 @@ function getPasswordLength () {
 }
 
 function desiredCharacterTypes () {
-    var includeLowercase = confirm("Include lowercase letters? (Yes/Cancel");
-    var includeUppercase =confirm("Include Upper Case letters? (Yes/Cancel)");
-    var includeNumeric = confirm("Include numeric characters? (Yes/Cancel");
-    var includeSpecial = confirm("Include special characters? (Yes/Cancel)");
+    var includeLowercase = confirm("Include lowercase letters? (Ok/Cancel)");
+    var includeUppercase =confirm("Include Upper Case letters? (Ok/Cancel)");
+    var includeNumeric = confirm("Include numeric characters? (Ok/Cancel)");
+    var includeSpecial = confirm("Include special characters? (Ok/Cancel)");
 
     return {
         includeLowercase: includeLowercase,
@@ -44,7 +44,40 @@ function generatePassword() {
         return '';
 
     }
+
+    var characterTypes = desiredCharacterTypes();
+    var characterPool = '';
+
+    if (characterTypes.includeLowercase) {
+        charPool += uppercaseChars;
+    }
+
+    
+  if (characterTypes.includeUppercase) {
+    charPool += uppercaseChars;
   }
+
+  if (characterTypes.includeNumeric) {
+    charPool += numericChars;
+  }
+
+  if (characterTypes.includeSpecial) {
+    charPool += specialChars;
+  }
+
+  if (characterPool.length === 0) {
+    alert("At least one character type must be selected.");
+    return '';
+  }
+
+  var generatedPassword = '';
+  for (var i = 0; i < passwordLength; i++) {
+    generatedPassword += charPool[Math.floor(Math.random() * charPool.length)];
+  }
+
+  return generatedPassword;
+}
+  
 
 // Write password to the #password input
 function writePassword() {
