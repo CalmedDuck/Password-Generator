@@ -49,20 +49,20 @@ function generatePassword() {
     var characterPool = '';
 
     if (characterTypes.includeLowercase) {
-        charPool += uppercaseChars;
+        characterPool += uppercaseChars;
     }
 
     
   if (characterTypes.includeUppercase) {
-    charPool += uppercaseChars;
+    characterPool += uppercaseChars;
   }
 
   if (characterTypes.includeNumeric) {
-    charPool += numericChars;
+    characterPool += numericChars;
   }
 
   if (characterTypes.includeSpecial) {
-    charPool += specialChars;
+    characterPool += specialChars;
   }
 
   if (characterPool.length === 0) {
@@ -72,7 +72,7 @@ function generatePassword() {
 
   var generatedPassword = '';
   for (var i = 0; i < passwordLength; i++) {
-    generatedPassword += charPool[Math.floor(Math.random() * charPool.length)];
+    generatedPassword += characterPool[Math.floor(Math.random() * characterPool.length)];
   }
 
   return generatedPassword;
