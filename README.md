@@ -10,7 +10,7 @@ This site will generate a random password depending on how long and what type of
 
 This website can be acessed through the following link. 
 
-
+https://calmedduck.github.io/Password-Generator/
 
 ## Usage
 
