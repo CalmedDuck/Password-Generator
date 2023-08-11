@@ -4,7 +4,7 @@ function getPasswordLength() {
   var passwordLength = prompt("Enter your desired password length (8-128 characters).");
   return parseInt(passwordLength);
 }
-
+//asking the user what characters they want to include in their password.
 function desiredCharacterTypes() {
   var includeLowercase = confirm("Include lowercase letters? (Ok/Cancel)");
   var includeUppercase = confirm("Include Upper Case letters? (Ok/Cancel)");
@@ -15,16 +15,17 @@ function desiredCharacterTypes() {
     includeLowercase: includeLowercase,
     includeUppercase: includeUppercase,
     includeNumeric: includeNumeric,
-    includeSpecial: includeSpecial // Corrected typo here
+    includeSpecial: includeSpecial 
   };
 }
-
+// all of the characters being used
 function generatePassword() {
   var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
   var specialChars = "!@#$%^&*()_-+=<>?";
   var numericChars = "0123456789";
   var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+  //requirements for the password length
   var passwordLength = getPasswordLength();
   if (isNaN(passwordLength)) {
     alert('Password length must be between 8-128 characters.');
@@ -64,7 +65,7 @@ function generatePassword() {
     alert("At least one character type must be selected.");
     return '';
   }
-
+//chooses a random chracter from the appropraite pools and repeats for the length of the requested password.
   var generatedPassword = '';
   for (var i = 0; i < passwordLength; i++) {
     generatedPassword += characterPool[Math.floor(Math.random() * characterPool.length)];

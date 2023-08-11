@@ -20,7 +20,9 @@ You can use the nav section and click on the links to take you to the following 
 
 ## Credits
 
-
+https://www.w3schools.com/jsref/jsref_isnan.asp
+https://www.w3schools.com/js/js_operators.asp
+https://www.w3schools.com/jsref/jsref_parseint.asp
 ## License
 
 Please refer to the LICENSE in the repo.
